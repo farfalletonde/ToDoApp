@@ -24,8 +24,8 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView>
-      <View>
+    <SafeAreaView style={{flex:1}}>
+      <View style={{flex:1}}>
         <Text style={styles.title}>To Do App</Text>
         <TextInput
           style={styles.inputField}
@@ -36,10 +36,10 @@ const App = () => {
           <Text style={styles.buttonText}>Add To Do Item</Text>
         </Pressable>
 
+        <View style={{flex:1}}>
         <FlatList
           data={toDoItems}
           style={{ marginTop: 16 }}
-          contentInset={{ top: 0, bottom: 50, left: 0, right: 0 }}
           renderItem={(itemData: ListRenderItemInfo<string>) => {
             return (
               <View style={styles.listItem}>
@@ -47,6 +47,7 @@ const App = () => {
               </View>
             );
           }} />
+          </View>
       </View>
     </SafeAreaView>
   );
