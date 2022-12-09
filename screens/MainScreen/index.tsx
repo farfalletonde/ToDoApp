@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import {
   FlatList,
   ListRenderItemInfo,
-  Pressable,
   Text,
   TextInput,
-  View,
+  View
 } from 'react-native';
+import PrimaryButton from '../../components/PrimaryButton';
 import styles from './styles';
 
 type MainScreenProps = { title: string }
@@ -15,7 +15,7 @@ const MainScreen = ({ title }: MainScreenProps) => {
   const [toDoItem, setToDoItem] = useState<string>('');
   const [toDoItems, setToDoItems] = useState<string[]>([]);
 
-  const { titleStyle, button, buttonText } = styles
+  const { titleStyle } = styles
 
   const handleToDoText = (item: string) => {
     setToDoItem(item);
@@ -35,22 +35,20 @@ const MainScreen = ({ title }: MainScreenProps) => {
         placeholder='Enter here...'
         onChangeText={handleToDoText} value={toDoItem} />
 
-      <Pressable style={button} onPress={addToDoItem}>
-        <Text style={buttonText}>Add To Do Item</Text>
-      </Pressable>
+      <PrimaryButton
+        title='Add To Do Item'
+        clickEvent={addToDoItem} />
 
-      <View style={{ flex: 1 }}>
-        <FlatList
-          data={toDoItems}
-          style={{ marginTop: 16 }}
-          renderItem={(itemData: ListRenderItemInfo<string>) => {
-            return (
-              <View style={styles.listItem}>
-                <Text style={{ color: 'white' }}>{itemData.item}</Text>
-              </View>
-            );
-          }} />
-      </View>
+      <FlatList
+        data={toDoItems}
+        style={{ marginTop: 16, flex: 1 }}
+        renderItem={(itemData: ListRenderItemInfo<string>) => {
+          return (
+            <View style={styles.listItem}>
+              <Text style={{ color: 'white' }}>{itemData.item}</Text>
+            </View>
+          );
+        }} />
     </View>
 
   );

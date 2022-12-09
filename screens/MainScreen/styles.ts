@@ -14,19 +14,6 @@ const styles = StyleSheet.create({
     padding: 8,
     borderRadius: 8
   },
-  button: {
-    marginHorizontal: 24,
-    marginTop: 24,
-    paddingVertical: 12,
-    borderRadius: 16,
-    backgroundColor: '#202020',
-    justifyContent: 'center'
-  },
-  buttonText: {
-    color: 'white',
-    textAlign: 'center',
-    fontWeight: '700'
-  },
   listItem: {
     marginHorizontal: 24,
     marginBottom: 16,
