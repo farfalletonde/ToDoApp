@@ -4,6 +4,7 @@ import {
   ListRenderItemInfo,
   Text,
   TextInput,
+  TouchableWithoutFeedback,
   View
 } from 'react-native';
 import PrimaryButton from '../../components/PrimaryButton';
@@ -26,6 +27,10 @@ const MainScreen = ({ title }: MainScreenProps) => {
     setToDoItem('')
   };
 
+  const handleItemClick = (item: string) => {
+    console.log(item);
+  };
+
   return (
 
     <View style={{ flex: 1 }}>
@@ -44,9 +49,11 @@ const MainScreen = ({ title }: MainScreenProps) => {
         style={{ marginTop: 16, flex: 1 }}
         renderItem={(itemData: ListRenderItemInfo<string>) => {
           return (
-            <View style={styles.listItem}>
-              <Text style={{ color: 'white' }}>{itemData.item}</Text>
-            </View>
+            <TouchableWithoutFeedback onPress={() => handleItemClick(itemData.item)}>
+              <View style={styles.listItem}>
+                <Text style={{ color: 'white' }}>{itemData.item}</Text>
+              </View>
+            </TouchableWithoutFeedback>
           );
         }} />
     </View>
