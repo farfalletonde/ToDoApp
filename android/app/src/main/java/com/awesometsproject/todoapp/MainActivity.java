@@ -1,5 +1,6 @@
-package com.awesometsproject;
+package com.awesometsproject.todoapp;
 
+import com.awesometsproject.todoapp.BuildConfig;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
@@ -48,7 +49,7 @@ public class MainActivity extends ReactActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-      return super.onCreate(null);
+      super.onCreate(null);
     }
   }
 }

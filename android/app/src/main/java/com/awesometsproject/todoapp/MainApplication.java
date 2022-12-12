@@ -1,7 +1,9 @@
-package com.awesometsproject;
+package com.awesometsproject.todoapp;
 
 import android.app.Application;
 import android.content.Context;
+
+import com.awesometsproject.todoapp.BuildConfig;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
@@ -9,7 +11,7 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.config.ReactFeatureFlags;
 import com.facebook.soloader.SoLoader;
-import com.awesometsproject.newarchitecture.MainApplicationReactNativeHost;
+import com.awesometsproject.todoapp.newarchitecture.MainApplicationReactNativeHost;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 

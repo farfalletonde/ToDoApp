@@ -1,4 +1,4 @@
-package com.awesometsproject.newarchitecture.modules;
+package com.awesometsproject.todoapp.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;
