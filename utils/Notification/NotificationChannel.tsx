@@ -1,4 +1,4 @@
-import PushNotification, {Importance} from 'react-native-push-notification';
+import PushNotification from 'react-native-push-notification';
 
 PushNotification.createChannel(
   {

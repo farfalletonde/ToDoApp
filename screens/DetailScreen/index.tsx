@@ -1,7 +1,6 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import React from 'react';
 import {Text, View} from 'react-native';
-import PushNotification from 'react-native-push-notification';
 import {RootStackParams} from '../../App';
 import PrimaryButton from '../../components/PrimaryButton';
 import {showNotification} from '../../utils/Notification/NotificationChannel';
